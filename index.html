@@ -1,3 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wiki du Modding de Mindustry</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers ton fichier CSS -->
+    <script src="script.js" defer></script> <!-- Lien vers ton fichier JS si nécessaire -->
+</head>
 <body>
-  <p>hello</p>
+
+    <!-- Entête avec navigation -->
+    <header>
+        <div class="container">
+            <h1>Wiki du Modding de Mindustry</h1>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#installation">Installation</a></li>
+                    <li><a href="#guide">Guides</a></li>
+                    <li><a href="#api">API</a></li>
+                    <li><a href="#examples">Exemples de Mods</a></li>
+                    <li><a href="#contrib">Contribuer</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        
+        <!-- Section Accueil -->
+        <section id="accueil">
+            <div class="container">
+                <h2>Bienvenue dans le Wiki du Modding de Mindustry</h2>
+                <p>Ce wiki contient toutes les informations nécessaires pour modder le jeu Mindustry et créer des modifications personnalisées grâce à notre outil facile à utiliser.</p>
+                <p>Vous y trouverez des guides détaillés, des exemples de code, ainsi que des ressources pour commencer vos projets de modding.</p>
+            </div>
+        </section>
+
+        <!-- Section Installation -->
+        <section id="installation">
+            <div class="container">
+                <h2>Installation de l'outil de modding</h2>
+                <p>Suivez les étapes ci-dessous pour installer l'outil nécessaire au modding de Mindustry :</p>
+                <ol>
+                    <li>Téléchargez le kit de modding depuis <a href="https://github.com/Anuke/Mindustry/releases">GitHub</a>.</li>
+                    <li>Extrayez le fichier téléchargé dans un répertoire de votre choix.</li>
+                    <li>Assurez-vous d'avoir une version de Java compatible installée sur votre machine.</li>
+                    <li>Ouvrez l'outil de modding et commencez à créer vos modifications !</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Section Guides -->
+        <section id="guide">
+            <div class="container">
+                <h2>Guides de Modding</h2>
+                <ul>
+                    <li><a href="#guide-base">Créer un mod de base</a></li>
+                    <li><a href="#guide-avance">Créez des unités et des blocs personnalisés</a></li>
+                    <li><a href="#guide-api">Utilisation de l'API de Mindustry</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section API -->
+        <section id="api">
+            <div class="container">
+                <h2>API de Mindustry pour le Modding</h2>
+                <p>L'API de Mindustry vous permet de manipuler les éléments du jeu comme les blocs, les unités, et les ressources. Voici un exemple simple :</p>
+                <pre>
+                    // Exemple de code pour créer un nouveau bloc
+                    const newBlock = new Block("myCustomBlock", {
+                        size: 2,
+                        health: 100,
+                        buildSpeed: 0.5
+                    });
+                    newBlock.add();
+                </pre>
+                <p>Pour plus d'informations, consultez la <a href="https://mindustrygame.github.io/wiki/Modding/">documentation complète de l'API</a>.</p>
+            </div>
+        </section>
+
+        <!-- Section Exemples de Mods -->
+        <section id="examples">
+            <div class="container">
+                <h2>Exemples de Mods Créés</h2>
+                <p>Voici quelques exemples de mods populaires créés par la communauté :</p>
+                <ul>
+                    <li><a href="#">Mod d'unité avancée</a></li>
+                    <li><a href="#">Mod de nouveaux blocs de production</a></li>
+                    <li><a href="#">Mod d'interfaces utilisateur personnalisées</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section Contribuer -->
+        <section id="contrib">
+            <div class="container">
+                <h2>Comment contribuer au projet ?</h2>
+                <p>Nous vous encourageons à participer au développement de l'outil de modding et à partager vos créations avec la communauté !</p>
+                <ul>
+                    <li>Forkez notre repository GitHub</li>
+                    <li>Ajoutez vos modifications et testez-les localement</li>
+                    <li>Soumettez une Pull Request avec vos améliorations ou nouveaux mods</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Modding Mindustry. Tous droits réservés.</p>
+        </div>
+    </footer>
+
 </body>
+</html>
