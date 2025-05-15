@@ -1,0 +1,111 @@
+:root {
+    --accent-color: #3B82F6;
+}
+
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1E2324;
+    color: #E6E6E6;
+}
+.gradient-text {
+    background: linear-gradient(90deg, #E6E6E6, #9CA3AF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.animated-bg {
+    background: linear-gradient(-45deg, #2A2E30, #303738, #393D3E, #484D4D);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.project-card {
+    transition: all 0.3s ease;
+    background: #2A2E30;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+.project-overlay {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+.typing-effect::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+    mix-blend-mode: difference;
+}
+input, textarea {
+    background-color: #2A2E30;
+    border: 1px solid #393D3E;
+    color: #E6E6E6;
+}
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #4B5563;
+}
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+.theme-switch {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #2A2E30;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.theme-switch-toggle {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: #E6E6E6;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+.theme-switch.active .theme-switch-toggle {
+    transform: translateX(30px);
+}
+.filter-btn.active {
+    background-color: #393D3E;
+    color: #E6E6E6;
+}
+/* Hide default number input arrows */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
